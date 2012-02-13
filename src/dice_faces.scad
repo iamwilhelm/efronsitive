@@ -1,8 +1,8 @@
 
 module dice_face(number, size = [50, 50], r = "undefined") {
   module pips(size, r) {
-    padding_x = 1.5 * r;
-    padding_y = 1.5 * r;
+    padding_x = 2 * r;
+    padding_y = 2 * r;
     offset_x = size[0] / 2 - padding_x;
     offset_y = size[1] / 2 - padding_y;
 
@@ -44,9 +44,9 @@ module dice_face(number, size = [50, 50], r = "undefined") {
       translate(bottom) sphere(r);
     }
 
-    module circle_of_pips(number) {
+    module circle_of_pips(number, r = 20 / 9, rim = [20, 20]) {
       for (i = [0 : number - 1]) {
-        translate([offset_x * cos(i * 360 / number), offset_y * sin(i * 360 / number), 0])
+        translate([rim[0] * cos(i * 360 / number), rim[1] * sin(i * 360 / number), 0])
           sphere(r);
       }
     }
@@ -67,24 +67,32 @@ module dice_face(number, size = [50, 50], r = "undefined") {
       dual_side_pips();      
       quad_corner_pips();
     } else if (number == 7) {
-      circle_of_pips(7);
+      circle_of_pips(7, r, [offset_x, offset_y]);
     } else if (number == 8) {
       quad_side_pips();
       quad_corner_pips();
     } else if (number == 9) {
+      // circle_of_pips(6, r, [1.2 * offset_x, 1.2 * offset_y]);
+      // rotate([0, 0, 30]) circle_of_pips(3, r, [0.5 * offset_x, 0.5 * offset_y]);
+      center_pip();
+      circle_of_pips(8, r, [offset_x, offset_y]); 
     }
   }
 
   if (r == "undefined") {
-    pips(size, size[0] / 9);
-    % square(size, center = true);
+    pips(size, size[0] / 10);
+    * square(size, center = true);
   } else {
     pips(size, r);
-    % square(size, center = true);
+    * square(size, center = true);
   }
 }
 
+size = [50, 50];
 for(i = [0 : 9]) {
-  translate([0, 0, i * 30]) dice_face(i + 1);
+  translate([0, 0, i * 30]) {
+    dice_face(i + 1, size);
+    % square(size, center=true);
+  }
 }
 
