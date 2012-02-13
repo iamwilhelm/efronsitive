@@ -21,7 +21,7 @@ module efron_a_dice() {
 }
 
 module efron_b_dice() {
-  dice(1, 1, 6, 6, 8, 8);
+  dice(3, 3, 3, 3, 3, 3);
 }
 
 
