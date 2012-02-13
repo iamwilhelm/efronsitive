@@ -16,8 +16,8 @@ module dice(top = 1, bottom = 6, left = 3, right = 4, front = 5, back = 2) {
   }
 }
 
-  dice(2, 2, 4, 4, 9, 9);
 module efron_a_dice() {
+  dice(4, 4, 4, 0, 0, 4);
 }
 
 module efron_b_dice() {
