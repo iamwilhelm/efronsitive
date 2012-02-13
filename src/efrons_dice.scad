@@ -24,8 +24,11 @@ module efron_b_dice() {
   dice(3, 3, 3, 3, 3, 3);
 }
 
+module efron_c_dice() {
+  dice(2, 2, 6, 2, 2, 6);
+}
 
 translate([0, 0, 0]) efron_a_dice();
 translate([75, 0, 0]) efron_b_dice();
-// translate([200, 0, 0]) ef_red_dice();
+translate([150, 0, 0]) efron_c_dice();
 
