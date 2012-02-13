@@ -88,6 +88,31 @@ module dice_face(number, size = [50, 50], r = "undefined") {
   }
 }
 
+module on_face(side, size) {
+  offset_x = size[0] / 2;
+  offset_y = size[1] / 2;
+
+  if (side == "top") {
+    translate([0, 0, offset_y])
+      for (i = [0 : $children - 1]) child(i);
+  } else if (side == "bottom") {
+    translate([0, 0, -offset_y])
+      for (i = [0 : $children - 1]) child(i);
+  } else if (side == "left") {
+    translate([-offset_x, 0, 0]) rotate([0, -90, 0])
+      for (i = [0 : $children - 1]) child(i);
+  } else if (side == "right") {
+    translate([offset_x, 0, 0]) rotate([0, 90, 0])
+      for (i = [0 : $children - 1]) child(i);
+  } else if (side == "front") {
+    translate([0, -offset_y, 0]) rotate([-90, 0, 0])
+      for (i = [0 : $children - 1]) child(i);
+  } else if (side == "back") {
+    translate([0, offset_y, 0]) rotate([90, 0, 0])
+      for (i = [0 : $children - 1]) child(i);
+  }
+}
+
 size = [50, 50];
 for(i = [0 : 9]) {
   translate([0, 0, i * 30]) {
