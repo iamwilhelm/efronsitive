@@ -1,5 +1,9 @@
 use <dice.scad>
 
+/* Efron's dice are set of four nontransitive dice such that the probabilities of A 
+ * winning against B, B against C, C against D, and D against A are all the same.
+ * It has 2:1 odds for winning pairs */
+
 module efron_a_dice() {
   dice(4, 4, 4, 0, 0, 4);
 }
