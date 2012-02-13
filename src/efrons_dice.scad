@@ -26,19 +26,23 @@ module on_face(side, size) {
   }
 }
 
-module ef_red_dice() {
+module dice(top = 1, bottom = 6, left = 3, right = 4, front = 5, back = 2) {
   face_size = [50, 50];
   cube_size = [50, 50, 50];
 
   difference() {
     rounded_cube(cube_size, r = 5, center = true);
-    on_face("top", face_size) dice_face(2, face_size);
-    on_face("bottom", face_size) dice_face(2, face_size);
-    on_face("left", face_size) dice_face(4, face_size);
-    on_face("right", face_size) dice_face(4, face_size);
-    on_face("front", face_size) dice_face(9, face_size);
-    on_face("back", face_size) dice_face(9, face_size);
+    on_face("top", face_size) dice_face(top, face_size);
+    on_face("bottom", face_size) dice_face(bottom, face_size);
+    on_face("left", face_size) dice_face(left, face_size);
+    on_face("right", face_size) dice_face(right, face_size);
+    on_face("front", face_size) dice_face(front, face_size);
+    on_face("back", face_size) dice_face(back, face_size);
   }
+}
+
+module ef_red_dice() {
+  dice(2, 2, 4, 4, 9, 9);
 }
 
 ef_red_dice();
