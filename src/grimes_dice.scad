@@ -18,29 +18,26 @@ use <dice.scad>
  * http://singingbanana.com/dice/article.htm
  */
 
-module grime_blue_dice() {
-  dice(7, 2, 7, 2, 7, 2);
+module grime_dice(colour, set = 1) {
+  if (set == 1) {
+    if (colour == "blue") {
+      dice(7, 2, 7, 2, 7, 2);
+    } else if (colour == "magenta") {
+      dice(1, 6, 1, 6, 6, 6);
+    } else if (colour == "olive") {
+      dice(5, 5, 5, 5, 0, 5);
+    } else if (colour == "red") {
+      dice(4, 4, 4, 4, 9, 4);
+    } else if (colour == "yellow") {
+      dice(8, 3, 8, 3, 3, 3);
+    }
+  } else if (set == 2) {
+  }
 }
 
-module grime_magenta_dice() {
-  dice(1, 6, 1, 6, 6, 6);
-}
-
-module grime_olive_dice() {
-  dice(5, 5, 5, 5, 0, 5);
-}
-
-module grime_red_dice() {
-  dice(4, 4, 4, 4, 9, 4);
-}
-
-module grime_yellow_dice() {
-  dice(8, 3, 8, 3, 3, 3);
-}
-
-translate([0, 0, 0]) grime_blue_dice();
-translate([100, 0, 0]) grime_magenta_dice();
-translate([200, 0, 0]) grime_olive_dice();
-translate([300, 0, 0]) grime_red_dice();
-translate([400, 0, 0]) grime_yellow_dice();
+translate([0, 0, 0]) grime_dice("blue");
+translate([100, 0, 0]) grime_dice("magenta");
+translate([200, 0, 0]) grime_dice("olive");
+translate([300, 0, 0]) grime_dice("red");
+translate([400, 0, 0]) grime_dice("yellow");
 
