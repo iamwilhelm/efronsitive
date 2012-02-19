@@ -4,7 +4,7 @@ use <../dice.scad>
  * winning against B, B against C, C against D, and D against A are all the same.
  * It has 2:1 odds for winning pairs */
 
-module efron_dice(colour, set = 1, size = [50, 50]) {
+module efron_dice(colour, set = 1, size = [25, 25]) {
   if (set == 1) {
     if (colour == "blue") {
       dice(4, 4, 4, 0, 0, 4, size);

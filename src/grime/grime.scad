@@ -18,18 +18,18 @@ use <../dice.scad>
  * http://singingbanana.com/dice/article.htm
  */
 
-module grime_dice(colour, set = 1) {
+module grime_dice(colour, set = 1, size = [25, 25]) {
   if (set == 1) {
     if (colour == "blue") {
-      dice(7, 2, 7, 2, 7, 2);
+      dice(7, 2, 7, 2, 7, 2, size);
     } else if (colour == "magenta") {
-      dice(1, 6, 1, 6, 6, 6);
+      dice(1, 6, 1, 6, 6, 6, size);
     } else if (colour == "olive") {
-      dice(5, 5, 5, 5, 0, 5);
+      dice(5, 5, 5, 5, 0, 5, size);
     } else if (colour == "red") {
-      dice(4, 4, 4, 4, 9, 4);
+      dice(4, 4, 4, 4, 9, 4, size);
     } else if (colour == "yellow") {
-      dice(8, 3, 8, 3, 3, 3);
+      dice(8, 3, 8, 3, 3, 3, size);
     }
   } else if (set == 2) {
   }

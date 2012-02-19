@@ -6,22 +6,22 @@ use <../dice.scad>
  * die give the sum of 30 and have an arithmetic mean of 5. 
  */
 
-module miwin_dice(name, set = 1) {
+module miwin_dice(name, set = 1, size = [25, 25]) {
   if (set == 1) {
     if (name == 3) {
-      dice(6, 5, 7, 2, 9, 1);
+      dice(6, 5, 7, 2, 9, 1, size);
     } else if (name == 4) {
-      dice(5, 4, 9, 1, 8, 3);
+      dice(5, 4, 9, 1, 8, 3, size);
     } else if (name == 5) {
-      dice(4, 6, 8, 3, 7, 2);
+      dice(4, 6, 8, 3, 7, 2, size);
     }
   } else if (set == 2) {
     if (name == 9) {
-      dice(3, 7, 5, 6, 8, 1);
+      dice(3, 7, 5, 6, 8, 1, size);
     } else if (name == 10) {
-      dice(1, 8, 6, 4, 9, 2);
+      dice(1, 8, 6, 4, 9, 2, size);
     } else if (name == 11) {
-      dice(2, 9, 4, 5, 7, 3);
+      dice(2, 9, 4, 5, 7, 3, size);
     }
   }
 }
