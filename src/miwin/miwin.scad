@@ -1,4 +1,4 @@
-use <dice.scad>
+use <../dice.scad>
 
 /* Miwin's Dice are a set of nontransitive dice invented in 1975 by the physicist 
  * Michael Winkelmann. They consist of three different dice with faces bearing 

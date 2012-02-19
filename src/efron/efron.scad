@@ -1,4 +1,4 @@
-use <dice.scad>
+use <../dice.scad>
 
 /* Efron's dice are set of four nontransitive dice such that the probabilities of A 
  * winning against B, B against C, C against D, and D against A are all the same.

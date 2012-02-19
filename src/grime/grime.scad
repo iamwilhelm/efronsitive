@@ -1,4 +1,4 @@
-use <dice.scad>
+use <../dice.scad>
 
 /* Grime's dice are a set of five nontransitive dice. 
  * This set of five dice is similar to other sets of dice we have seen, in that 
