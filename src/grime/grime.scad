@@ -18,7 +18,7 @@ use <../dice.scad>
  * http://singingbanana.com/dice/article.htm
  */
 
-module grime_dice(colour, set = 1, size = [25, 25]) {
+module grime(colour, set = 1, size = [25, 25]) {
   if (set == 1) {
     if (colour == "blue") {
       dice(7, 2, 7, 2, 7, 2, size);
