@@ -35,9 +35,9 @@ module grime(colour, set = 1, size = [25, 25]) {
   }
 }
 
-translate([0, 0, 0]) grime_dice("blue");
-translate([100, 0, 0]) grime_dice("magenta");
-translate([200, 0, 0]) grime_dice("olive");
-translate([300, 0, 0]) grime_dice("red");
-translate([400, 0, 0]) grime_dice("yellow");
+translate([0, 0, 0]) grime("blue");
+translate([100, 0, 0]) grime("magenta");
+translate([200, 0, 0]) grime("olive");
+translate([300, 0, 0]) grime("red");
+translate([400, 0, 0]) grime("yellow");
 
