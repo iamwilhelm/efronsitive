@@ -122,9 +122,10 @@ for(i = [0 : 9]) {
   }
 }
 
-module dice(top = 1, bottom = 6, left = 3, right = 4, front = 5, back = 2) {
-  face_size = [50, 50];
-  cube_size = [50, 50, 50];
+module dice(top = 1, bottom = 6, left = 3, right = 4, front = 5, back = 2, 
+            size = [50, 50]) {
+  face_size = [size[0], size[1]];
+  cube_size = [size[0], size[0], size[1]];
 
   difference() {
     rounded_cube(cube_size, r = 5, center = true);
