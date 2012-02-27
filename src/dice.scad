@@ -126,9 +126,10 @@ module dice(top = 1, bottom = 6, left = 3, right = 4, front = 5, back = 2,
             size = [50, 50]) {
   face_size = [size[0], size[1]];
   cube_size = [size[0], size[0], size[1]];
+  corner_size = size[0] / 10;
 
   difference() {
-    rounded_cube(cube_size, r = 5, center = true);
+    rounded_cube(cube_size, r = corner_size, center = true);
     on_face("top", face_size) dice_face(top, face_size);
     on_face("bottom", face_size) dice_face(bottom, face_size);
     on_face("left", face_size) dice_face(left, face_size);
