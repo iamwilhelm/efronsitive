@@ -7,6 +7,59 @@ Efronsitive is a library of 3D printable non-transitive dice.
 
 [Follow me on twitter](http://twitter.com/iamwil)
 
+What are non-transitive dice?
+----------------------------
+
+[Non-transitive dice](http://en.wikipedia.org/wiki/Nontransitive_dice) are a set of dice where no one dice has a better chance of winning head-to-head with another dice in the set. They're like the rock-paper-scissors of the dice world. 
+
+The idea for them have been around since the 1970's: Gardner, M. "Mathematical Games: The Paradox of the Nontransitive Dice and the Elusive Principle of Indifference." Sci. Amer. 223 , 110-114, Dec. 1970.
+
+There are different sets of possible non-transitive dice, usually named after its inventor. I have three inventors here. If you have others, feel free to fork, contribute, and send a pull request! The three I have implemented here are Efron, Grime, and Miwin.
+
+###Efron's Dice
+
+[Efron's dice](http://en.wikipedia.org/wiki/Nontransitive_dice#Efron.27s_dice) are a set of four dice where each dice beats their predecessor by a probability of 2/3. 
+
+The dice is named and ordered by the color scheme where:
+
+    Blue > Magenta > Olive > Red > Blue
+
+which means if you're reading the wikipedia article, A corresponds to Blue, B to Magenta, C to Olive, and D to Red. The colors of the dice are in alphabetical order, to help you remember. This color scheme was adopted from [here](http://singingbanana.com/dice/article.htm#FN5)
+
+###Miwin's Dice
+
+[Miwin's dice](http://en.wikipedia.org/wiki/Miwin%27s_dice) are two sets of three dice each with the probability that it will have a higher number than another is 17/36; a lower number, 15/36.
+
+Since there are only three dice, each dice will beat one and lose to the other on average.
+
+The dice can be distinguished by color, or by the sum of their smallest two 
+numbers. For example, the III dice in the Miwin set has faces 1 and 2 on it, which 
+are the smallest two numbers on the dice. Add up 1 and 2, and you get 3, which 
+is the name of that Miwin dice. Dices III, IV, and V, are in one set, and dices 
+IX, X, and XI, are in the other.
+
+These set of dice also has reverse non-transitivity. Normally, III beats IV. But if you remove the common faces, the dice reverses their intransitivity, meaning now IV beats III. This applies to the other two combinations of IV and V, and V and III.
+
+###Grime's Dice
+
+[Grime's dice](http://singingbanana.com/dice/article.htm#FN5) is a set of 5 dice, each denoted by a color, where the order of which dice beats which is ordered in two ways:
+
+    Alphabetical order of the color's name
+    Blue > Magenta > Olive > Red > Yellow > Blue
+
+    By the length of each color's name
+    Red > Blue > Olive > Yellow > Magenta > Red
+
+In general, the alphabetical chain is stronger than the word length chain. Overall, the average winning probability for one die is 63%
+
+Like Miwin's dice, Grime's dice also has reverse non-transitivity. If you have two dice of each color, now the order for word length now flips so: 
+
+    Magenta > Yellow > Olive > Blue > Red  >Magenta
+
+With two dice, the chain ordered by word-length is stronger than the alphabetical chain. The average winning probability for two dice is 59%
+
+Grime's dice has other fascinating properties that I suggest you look at [here](http://singingbanana.com/dice/article.htm#FN5).
+
 Print it out
 ------------
 
