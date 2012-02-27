@@ -19,35 +19,132 @@ Then load the STL files into using the software that your printer uses to print 
 Bill of Materials
 -----------------
 
-Under each of the directories is the name of a set of dice. It has a plate.scad file. Print out each one, if you don't care about the color. But chances are you do, because there's no other way to distinguish the dice.
+Under each of the directories is the name of a set of dice. It has a plate.scad file. Print out each one,  if you don't care about the color. But chances are you do, 
+because it's easier to distinguish between the dice.
 
 ### Efron Dice
 
-- 1 blue blue.scad
-- 1 magenta magenta.scad
-- 1 olive olive.scad
-- 1 red red.scad
+<table border="1">
+  <tr>
+    <th>Part name</th>
+    <th>Color</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>efron_blue.scad</td>
+    <td>blue</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>efron_magenta.scad</td>
+    <td>magenta</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>efron_olive.scad</td>
+    <td>olive</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>efron_red.scad</td>
+    <td>red</td>
+    <td>1</td>
+  </tr>
+</table>
+
+*or just print out efron/plate.scad if you don't care about colors*
 
 ### Grime Dice
 
-- 1 blue blue.scad
-- 1 magenta magenta.scad
-- 1 olive olive.scad
-- 1 red red.scad
-- 1 yellow yellow.scad
+<table border="1">
+  <tr>
+    <th>Part name</th>
+    <th>Color</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>grime_blue.scad</td>
+    <td>blue</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>grime_magenta.scad</td>
+    <td>magenta</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>grime_olive.scad</td>
+    <td>olive</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>grime_red.scad</td>
+    <td>blue</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>grime_yellow.scad</td>
+    <td>yellow</td>
+    <td>1</td>
+  </tr>
+</table>
+
+*or just print out efron/plate.scad if you don't care about colors*
 
 ### Miwin Dice Set 1
-- 1 blue III.scad
-- 1 blue IV.scad
-- 1 blue V.scad
+
+<table border="1">
+  <tr>
+    <th>Part name</th>
+    <th>Color</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>miwin_iii.scad</td>
+    <td>blue</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>miwin_iv.scad</td>
+    <td>red</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>miwin_v.scad</td>
+    <td>black</td>
+    <td>1</td>
+  </tr>
+</table>
 
 ### Miwin Dice Set 2
-- 1 magenta IX.scad
-- 1 magenta X.scad
-- 1 magenta XI.scad
 
-Using the code
---------------
+<table border="1">
+  <tr>
+    <th>Part name</th>
+    <th>Color</th>
+    <th>Quantity</th>
+  </tr>
+  <tr>
+    <td>miwin_ix.scad</td>
+    <td>yellow</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>miwin_x.scad</td>
+    <td>white</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>miwin_xi.scad</td>
+    <td>green</td>
+    <td>1</td>
+  </tr>
+</table>
+
+*I've also provided the Miwin plates as well for convenience*
+
+Usage
+-----
 
 You can make a regular dice by using dice.scad and just calling dice:
 
