@@ -2,6 +2,7 @@ use <rounded.scad>
 
 module dice_face(number, size = [50, 50], r = "undefined") {
   module pips(size, r) {
+    $fn = 30;
     padding_x = 2 * r;
     padding_y = 2 * r;
     offset_x = size[0] / 2 - padding_x;
