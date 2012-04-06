@@ -237,3 +237,4 @@ For the set of the different dice, the names of the dice depends on the set.
     miwin(10, [25, 25]);
     miwin(11, [25, 25]);
 
+And that's it!
